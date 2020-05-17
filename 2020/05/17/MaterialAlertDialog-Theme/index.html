@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="文件MaterialComponents 使用MaterialAlertDialog  Android Theme設定  MaterialAlertDialog 預設顏色設定  87% 與 60% 指的是透明度  使用 &lt;item name&#x3D;&quot;materialAlertDialogTheme&quot;&gt;@style&#x2F;CustomAlertDialogTheme&lt;&#x2F;it">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MaterialAlertDialog Theme">
+<meta property="og:url" content="http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/index.html">
+<meta property="og:site_name" content="JiaZhang筆記">
+<meta property="og:description" content="文件MaterialComponents 使用MaterialAlertDialog  Android Theme設定  MaterialAlertDialog 預設顏色設定  87% 與 60% 指的是透明度  使用 &lt;item name&#x3D;&quot;materialAlertDialogTheme&quot;&gt;@style&#x2F;CustomAlertDialogTheme&lt;&#x2F;it">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drive.google.com/uc?id=1pVpydTUCttJDuNPlX8wYuOfWolW043i9">
+<meta property="og:image" content="https://drive.google.com/uc?id=1Cg_qPnee4mvMeM0C1ug4cpLHqimffym0">
+<meta property="og:image" content="https://drive.google.com/uc?id=1WOSKhCphdqa8HwfM7sNiT-WdOQ4qGt0C">
+<meta property="og:image" content="https://drive.google.com/uc?id=1WC1x3COCBDy9vl3vUq8jHQiLUfHKz_tW">
+<meta property="article:published_time" content="2020-05-17T13:24:33.000Z">
+<meta property="article:modified_time" content="2020-05-17T13:24:33.765Z">
+<meta property="article:author" content="JiaZhang">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="Theme">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://drive.google.com/uc?id=1pVpydTUCttJDuNPlX8wYuOfWolW043i9">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>MaterialAlertDialog Theme</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&text=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&title=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&is_video=false&description=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=MaterialAlertDialog Theme&body=Check out this article: http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&title=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&title=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&title=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&title=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&name=MaterialAlertDialog Theme&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&t=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        MaterialAlertDialog Theme
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">JiaZhang筆記</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-05-17T13:24:33.000Z" itemprop="datePublished">2020-05-17</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/Android/" rel="tag">Android</a>, <a class="tag-link" href="/tags/Theme/" rel="tag">Theme</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>文件<a href="https://material.io/develop/android/components/dialogs/" target="_blank" rel="noopener">MaterialComponents</a></p>
+<p>使用MaterialAlertDialog</p>
+<script src="//gist.github.com/dd6da94892e5a3bbf8869c4e4823be29.js?file=base_alert_dialog.kt"></script>
+<p>Android Theme設定</p>
+<script src="//gist.github.com/dd6da94892e5a3bbf8869c4e4823be29.js?file=base_style.xml"></script>
+<p>MaterialAlertDialog 預設顏色設定</p>
+<p><img src="https://drive.google.com/uc?id=1pVpydTUCttJDuNPlX8wYuOfWolW043i9" alt=""><br>
+87% 與 60% 指的是透明度</p>
+<hr>
+<p>使用</p>
+<pre><code class="language-xml">&lt;item name=&quot;materialAlertDialogTheme&quot;&gt;@style/CustomAlertDialogTheme&lt;/item&gt;
+</code></pre>
+<p>另外指定theme<br>
+會套用在所有的dialog上<br>
+如果只想修改某個Dialog的顏色<br>
+就傳入</p>
+<pre><code class="language-java">MaterialAlertDialogBuilder(Context context, int overrideThemeResId)
+</code></pre>
+<p>的第二個參數</p>
+<script src="//gist.github.com/dd6da94892e5a3bbf8869c4e4823be29.js?file=with_other_style.xml"></script>
+<p><img src="https://drive.google.com/uc?id=1Cg_qPnee4mvMeM0C1ug4cpLHqimffym0" alt=""></p>
+<hr>
+<p>標題文字 內文 按鈕theme設定</p>
+<script src="//gist.github.com/dd6da94892e5a3bbf8869c4e4823be29.js?file=specific_style.xml"></script>
+<p><img src="https://drive.google.com/uc?id=1WOSKhCphdqa8HwfM7sNiT-WdOQ4qGt0C" alt=""></p>
+<hr>
+<p>shape設定</p>
+<p>文件<a href="https://material.io/develop/android/theming/shape/" target="_blank" rel="noopener">MaterialComponents</a></p>
+<script src="//gist.github.com/dd6da94892e5a3bbf8869c4e4823be29.js?file=with_shape_style.xml"></script>
+<p><img src="https://drive.google.com/uc?id=1WC1x3COCBDy9vl3vUq8jHQiLUfHKz_tW" alt=""></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&text=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&title=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&is_video=false&description=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=MaterialAlertDialog Theme&body=Check out this article: http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&title=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&title=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&title=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&title=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&name=MaterialAlertDialog Theme&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://yoursite.com/2020/05/17/MaterialAlertDialog-Theme/&t=MaterialAlertDialog Theme" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/railscasts.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2020
+    JiaZhang
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
